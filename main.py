@@ -28,9 +28,6 @@ def collect_file_results_list():
 
     test_db={}
 
-    # we shall store all the file names in this list
-    filelist = []
-
     for root, dirs, files in os.walk(workspace_path):
         for dir in dirs:
 
@@ -41,7 +38,6 @@ def collect_file_results_list():
                     if os.path.exists(full_path_testname):
 
 			# make a pair <testname,full_path_testname> and add into test_db
-                        filelist.append(full_path_testname)
                         test_db.setdefault(testname, []).append(full_path_testname)
     return test_db
 
