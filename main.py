@@ -40,7 +40,7 @@ def collect_file_results_list():
 
                     if os.path.exists(full_path_testname):
 
-			# build a pair <testname,full_path_testname> inside test_db
+			# make a pair <testname,full_path_testname> and add into test_db
                         filelist.append(full_path_testname)
                         test_db.setdefault(testname, []).append(full_path_testname)
     return test_db
